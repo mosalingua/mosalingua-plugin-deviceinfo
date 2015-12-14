@@ -4,6 +4,8 @@
  */
 package com.mosalingua.plugin.deviceinfo;
 
+import java.lang.reflect.Method;
+
 import android.content.Context;
 import android.telephony.TelephonyManager;
 import android.provider.Settings;
@@ -149,7 +151,7 @@ public class DeviceInfo extends CordovaPlugin {
 	}
 
     //http://stackoverflow.com/questions/14161282/serial-number-from-samsung-device-running-android
-	public String getManufacturerSerialNumberGalaxyTab(string property) {
+	public String getManufacturerSerialNumberGalaxyTab(String property) {
 	    String serial = null; 
 	    try {
 	        Class<?> c = Class.forName("android.os.SystemProperties");
