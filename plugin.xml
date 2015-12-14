@@ -1,22 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-	id="org.hygieiasoft.cordova.uid"
+	id="com.mosalingua.plugin.deviceinfo"
 	version="1.1.0">
-	<name>UID</name>
-	<description>Cordova plugin to get unique identifiers: UUID, IMEI, IMSI, ICCID and MAC.</description>
+	<name>DeviceInfo</name>
+	<description>Cordova plugin to get unique identifiers: SN (galaxy tab) UUID, IMEI, IMSI, ICCID and MAC.</description>
 	<license>MIT</license>
 	<keywords>cordova,uid,imei,imsi,uuid,sim,iccid,mac</keywords>
-	<repo>https://github.com/hygieiasoft/cordova-plugin-uid</repo>
-	<issue>https://github.com/hygieiasoft/cordova-plugin-uid/issues</issue>
+	<repo>https://github.com/mosalingua/mosalingua-plugin-deviceinfo.git</repo>
+	<issue>https://github.com/mosalingua/mosalingua-plugin-deviceinfo.git/issues</issue>
 
-	<js-module src="www/uid.js" name="uid">
-		<clobbers target="cordova.plugins.uid" />
+	<js-module src="www/deviceinfo.js" name="DeviceInfo">
+		<clobbers target="window.deviceinfo" />
 	</js-module>
 
 	<platform name="android">
 		<config-file target="res/xml/config.xml" parent="/*">
-			<feature name="UID">
-				<param name="android-package" value="org.hygieiasoft.cordova.uid.UID" />
+			<feature name="DeviceInfo">
+				<param name="android-package" value="com.mosalingua.plugin.deviceinfo" />
 			</feature>
 		</config-file>
 		<config-file target="AndroidManifest.xml" parent="/*">
@@ -24,7 +24,7 @@
 			<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 		</config-file>
 
-		<source-file src="src/android/UID.java" target-dir="src/org/hygieiasoft/cordova/uid" />
+		<source-file src="src/android/com/mosalingua/plugin/deviceinfo/DeviceInfo.java" target-dir="src/com/mosalingua/deviceinfo/DeviceInfo" />
 	</platform>
 
 </plugin>
