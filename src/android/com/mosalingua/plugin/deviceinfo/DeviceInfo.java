@@ -61,7 +61,7 @@ public class DeviceInfo extends CordovaPlugin {
 		//UID.iccid = getIccid(context);
 		//UID.mac = getMac(context);
 		DeviceInfo.serial = getSerialNumber(context);
-	}*/
+	}
 
 	/**
 	 * Executes the request and returns PluginResult.
