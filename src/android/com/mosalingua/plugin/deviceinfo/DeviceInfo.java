@@ -120,7 +120,7 @@ public class DeviceInfo extends CordovaPlugin {
 		}
 		finally {
 			if(serial==null) {
-				serial = "";
+				serial = "unknown";
 			}
 		}
 		
@@ -137,7 +137,7 @@ public class DeviceInfo extends CordovaPlugin {
 	 */
 	public String getIMEI(Context context) {
 
-		String imei = "";
+		String imei = "unknown";
 		
 		try {
 			final TelephonyManager mTelephony = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
