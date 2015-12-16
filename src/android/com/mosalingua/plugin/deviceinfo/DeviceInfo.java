@@ -27,6 +27,8 @@ public class DeviceInfo extends CordovaPlugin {
     public static String ACTION_GET_IMEI = "getIMEI";
     public static String ACTION_GET_SERIAL_NUMBER = "getSerialNumber";
     public static String ACTION_GET_DEVICE_INFO = "getDeviceInfo";
+    //for testing purposes only, returns dummy values
+    public static String ACTION_GET_DEVICE_INFO_TESTING = "getDeviceInfoTesting";
 
     //seen on Galaxy Tab 2
     public static String PROPERTY_SERIAL_TAB2 = "ril.serialnumber";
@@ -90,6 +92,12 @@ public class DeviceInfo extends CordovaPlugin {
 			JSONObject r = new JSONObject();
 			r.put("IMEI", DeviceInfo.imei);
 			r.put("SERIAL", DeviceInfo.serial);
+			callbackContext.success(r);
+		}//testing/dummy values
+		else if (action.equals(ACTION_GET_DEVICE_INFO_TESTING)) {
+			JSONObject r = new JSONObject();
+			r.put("IMEI", "353490068304464");
+			r.put("SERIAL", "R52FC0WYJNN");
 			callbackContext.success(r);
 		}
 		else {

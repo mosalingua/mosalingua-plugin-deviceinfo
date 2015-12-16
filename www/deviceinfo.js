@@ -32,6 +32,18 @@ cordova.define("com.mosalingua.plugin.deviceinfo.DeviceInfo", function(require, 
                 'getDeviceInfo',
                 []
             );
+        },
+        //get testing/dummy values for IMEI and Serial Number 
+        //WARNING: do not call this method in production
+        getDeviceInfoTesting: function (successCallback,errorCallback) {
+
+            cordova.exec(
+                successCallback,
+                errorCallback,
+                'DeviceInfo',
+                'getDeviceInfoTesting',
+                []
+            );
         }
     };
 
